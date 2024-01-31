@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:map_page/components/constants.dart';
 import 'package:map_page/screens/mapPage.dart';
 
 class HomePage extends StatefulWidget {
@@ -56,6 +57,7 @@ class _HomePageState extends State<HomePage> {
     'Sunflower',
     'Peanuts',
     'Jawar'];
+
   String? dropdownValue1;
   var quantityUnits = ['kg','lbs'];
   String? dropdownValue2;
@@ -107,18 +109,11 @@ class _HomePageState extends State<HomePage> {
               children: [
                 const Text(
                   'Type of Crop',
-                  style: TextStyle(
-                    fontFamily: 'Readex Pro',
-                    fontSize: 14,
-                      fontWeight: FontWeight.bold,
-                  ),
+                  style: kTextStyle,
                 ),
                 SizedBox(height: 10),
                 Container(
-                  decoration: BoxDecoration(
-                      border: Border.all(color: Colors.grey),
-                      borderRadius: BorderRadius.circular(8.0)
-                  ),
+                  decoration: kBoxDecoration,
                   child: DropdownButton(
                     underline: Container(),
                     hint: Text('Select Crop'),
@@ -135,18 +130,11 @@ class _HomePageState extends State<HomePage> {
                 SizedBox(height: 10),
                 const Text(
                   'Variety',
-                  style: TextStyle(
-                    fontFamily: 'Readex Pro',
-                    fontSize: 14,
-                      fontWeight: FontWeight.bold,
-                  ),
+                  style: kTextStyle
                 ),
                 SizedBox(height: 10),
                 Container(
-                    decoration: BoxDecoration(
-                        border: Border.all(color: Colors.grey),
-                        borderRadius: BorderRadius.circular(8.0)
-                    ),
+                    decoration: kBoxDecoration,
                     child: TextField(
                       decoration: InputDecoration(
                         border: InputBorder.none
@@ -158,11 +146,7 @@ class _HomePageState extends State<HomePage> {
                 SizedBox(height: 10),
                 const Text(
                   'Expected Quantity',
-                  style: TextStyle(
-                    fontFamily: 'Readex Pro',
-                    fontSize: 14,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: kTextStyle,
                 ),
                 SizedBox(height: 10),
                 Row(
@@ -170,10 +154,7 @@ class _HomePageState extends State<HomePage> {
                     Container(
                       width: 200,
                       child: Container(
-                          decoration: BoxDecoration(
-                              border: Border.all(color: Colors.grey),
-                              borderRadius: BorderRadius.circular(8.0)
-                          ),
+                          decoration: kBoxDecoration,
                           child: TextField(
                             decoration: InputDecoration(
                                 border: InputBorder.none
@@ -187,10 +168,7 @@ class _HomePageState extends State<HomePage> {
             Container(
               child: Expanded(
                 child: Container(
-                    decoration: BoxDecoration(
-                        border: Border.all(color: Colors.grey),
-                        borderRadius: BorderRadius.circular(8.0)
-                    ),
+                    decoration: kBoxDecoration,
                   child: DropdownButton(
                     underline: Container(),
                     hint: Text('kg'),
@@ -216,18 +194,11 @@ class _HomePageState extends State<HomePage> {
                 SizedBox(height: 10),
                 const Text(
                   'Price(per kg)',
-                  style: TextStyle(
-                    fontFamily: 'Readex Pro',
-                    fontSize: 14,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: kTextStyle
                 ),
                 SizedBox(height: 10),
                 Container(
-                    decoration: BoxDecoration(
-                        border: Border.all(color: Colors.grey),
-                        borderRadius: BorderRadius.circular(8.0)
-                    ),
+                    decoration: kBoxDecoration,
                     child: TextField(
                       decoration: InputDecoration(
                           border: InputBorder.none
@@ -239,18 +210,11 @@ class _HomePageState extends State<HomePage> {
                 SizedBox(height: 10),
                 const Text(
                   'Note',
-                  style: TextStyle(
-                    fontFamily: 'Readex Pro',
-                    fontSize: 14,
-                      fontWeight: FontWeight.bold,
-                  ),
+                  style: kTextStyle,
                 ),
                 SizedBox(height: 10),
                 Container(
-                    decoration: BoxDecoration(
-                        border: Border.all(color: Colors.grey),
-                        borderRadius: BorderRadius.circular(8.0)
-                    ),
+                    decoration: kBoxDecoration,
                     child: TextField(
                       decoration: InputDecoration(
                           border: InputBorder.none
@@ -262,11 +226,7 @@ class _HomePageState extends State<HomePage> {
                 SizedBox(height: 10),
                 const Text(
                   'Images',
-                  style: TextStyle(
-                    //fontFamily: 'Readex Pro',
-                    fontSize: 14,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: kTextStyle,
                 ),
                 SizedBox(height: 10),
                 Padding(
@@ -275,9 +235,7 @@ class _HomePageState extends State<HomePage> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8.0)
-                          ),
+                          decoration: kBoxDecoration,
                         width: 100,
                         height: 100,
                         child: Image(
